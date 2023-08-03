@@ -1,5 +1,6 @@
 // src/App.js
 // import React from 'react';
+import Header from './Header';
 import ImageEvent from './ImageEvent';
 import image1 from './images/image1.jpeg';
 import image2 from './images/image2.jpg';
@@ -15,6 +16,8 @@ const imageEvents = [
 
 const App = () => {
   return (
+    <>
+    <Header/>
     <div className="container mx-auto mt-4">
       <div className="grid grid-cols-2 gap-4">
         {imageEvents.map((event, index) => (
@@ -27,6 +30,7 @@ const App = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
