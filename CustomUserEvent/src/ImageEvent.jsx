@@ -25,10 +25,10 @@ const ImageEvent = ({ imageUrl, initialLikes, initialDislikes }) => {
   };
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
       <img src={imageUrl} alt="Event" className="w-full" />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">Event Image</div>
+        <div className="font-bold text-xl mb-2">Art Images</div>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <button className="mr-2" onClick={handleLike}>
@@ -49,7 +49,7 @@ const ImageEvent = ({ imageUrl, initialLikes, initialDislikes }) => {
         {shareDate && <p>Shared on: {shareDate}</p>}
         {!likeDate && !shareDate && <p>No likes or shares yet.</p>}
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
+          className="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
           onClick={handleShare}
         >
           Share
