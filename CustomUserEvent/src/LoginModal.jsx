@@ -8,11 +8,12 @@ Modal.setAppElement('#root');
 
 const LoginModal = ({ isOpen, onClose }) => {
   return (
+    //...............main content start here....................
     <Modal
-      isOpen={isOpen}
-      onRequestClose={onClose}
-      className="modal top-20 bg-opacity-90"
-      overlayClassName="modal-overlay"
+    isOpen={isOpen}
+    onRequestClose={onClose}
+    className="modal top-20 bg-opacity-90"
+    overlayClassName="modal-overlay"
     >
       <div className="modal-header flex items-center justify-between p-4 bg-blue-500 text-white">
         <h2 className="text-xl font-bold">Login</h2>
@@ -32,7 +33,7 @@ const LoginModal = ({ isOpen, onClose }) => {
               name="username"
               className="block w-full border rounded px-4 py-2"
               required
-            />
+              />
           </div>
           <div>
             <label htmlFor="password" className="block font-bold">
@@ -50,7 +51,7 @@ const LoginModal = ({ isOpen, onClose }) => {
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
+              >
               Log In
             </button>
             <button
@@ -64,6 +65,7 @@ const LoginModal = ({ isOpen, onClose }) => {
         </form>
       </div>
     </Modal>
+      //........................main content ends here..........................
   );
 };
 
