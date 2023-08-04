@@ -8,9 +8,10 @@ Modal.setAppElement('#root');
 
 const SignupModal = ({ isOpen, onClose }) => {
   return (
+    //.................main content start here.............................
     <Modal
-      isOpen={isOpen}
-      onRequestClose={onClose}
+    isOpen={isOpen}
+    onRequestClose={onClose}
       className="modal"
       overlayClassName="modal-overlay"
     >
@@ -76,6 +77,7 @@ const SignupModal = ({ isOpen, onClose }) => {
         </form>
       </div>
     </Modal>
+        //.................main content end here.............................
   );
 };
 

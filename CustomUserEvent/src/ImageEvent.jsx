@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 
 const ImageEvent = ({ imageUrl, initialLikes, initialDislikes }) => {
+  //.............Event logic start here........................
   const [likes, setLikes] = useState(initialLikes);
   const [dislikes, setDislikes] = useState(initialDislikes);
   const [likeDate, setLikeDate] = useState(null);
   const [shareDate, setShareDate] = useState(null);
-
+  
   const handleLike = () => {
     setLikes((prevLikes) => prevLikes + 1);
     setLikeDate(new Date().toLocaleString());
@@ -24,8 +25,10 @@ const ImageEvent = ({ imageUrl, initialLikes, initialDislikes }) => {
    alert("Image has been shared...")
   };
 
+  //.............Event logic ends here........................
   return (
-    <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
+      //.............Main Content start here........................
+      <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
       <img src={imageUrl} alt="Event" className="w-full" />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Art Images</div>
@@ -51,11 +54,12 @@ const ImageEvent = ({ imageUrl, initialLikes, initialDislikes }) => {
         <button
           className="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
           onClick={handleShare}
-        >
+          >
           Share
         </button>
       </div>
     </div>
+      //.....................Main Content start here...........................
   );
 };
 

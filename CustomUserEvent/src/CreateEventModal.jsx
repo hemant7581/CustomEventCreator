@@ -6,11 +6,12 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-Modal.setAppElement('#root');
+Modal.setAppElement('#root');  // To avoid accessibility issues
 
+//.................create event modal start here................
 const CreateEventModal = ({ isOpen, onClose }) => {
   const [eventDate, setEventDate] = useState(new Date());
-
+  
   const handleDateChange = (date) => {
     setEventDate(date);
   };
@@ -20,10 +21,12 @@ const CreateEventModal = ({ isOpen, onClose }) => {
     // Your event creation logic goes here
     onClose();
   };
+  //.................create event modal end here................
 
   return (
+    // ................main content starts here.................
     <Modal
-      isOpen={isOpen}
+    isOpen={isOpen}
       onRequestClose={onClose}
       className="modal"
       overlayClassName="modal-overlay"
@@ -92,6 +95,7 @@ const CreateEventModal = ({ isOpen, onClose }) => {
         </form>
       </div>
     </Modal>
+  // ....................main content ends here......................
   );
 };
 
